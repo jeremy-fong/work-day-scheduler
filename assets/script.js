@@ -7,7 +7,7 @@ displayCurrentDate(currentTime);
 // display current date
 function displayCurrentDate() {
     document.getElementById('currentDay').textContent = currentTime.format('dddd, MMMM Do YYYY');
-}
+};
 
 $('.time-block').each(function(){
     var tbHour = parseInt($(this).attr('id'));
@@ -35,6 +35,10 @@ $('textarea').each(function(){
     if (savedEvents !== null){
         $(this).val(savedEvents);
     }
+});
+
+$('#clearBtn').on('click', function(){
+    var clearEvent = '  '
+    localStorage.clear()
+    $('textarea').val(clearEvent);
 })
-
-
