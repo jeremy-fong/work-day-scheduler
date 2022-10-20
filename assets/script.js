@@ -9,6 +9,7 @@ function displayCurrentDate() {
     document.getElementById('currentDay').textContent = currentTime.format('dddd, MMMM Do YYYY');
 };
 
+// Color Timeblocks
 $('.time-block').each(function(){
     var tbHour = parseInt($(this).attr('id'));
     if (now > tbHour){
@@ -20,6 +21,7 @@ $('.time-block').each(function(){
     }
 });
 
+// local storage
 $('.saveBtn').on('click', function(){
     // e.preventDefault();
     var timeId = $(this).parent().attr('id');
@@ -37,6 +39,7 @@ $('textarea').each(function(){
     }
 });
 
+// clear button
 $('#clearBtn').on('click', function(){
     var clearEvent = '  '
     localStorage.clear()
