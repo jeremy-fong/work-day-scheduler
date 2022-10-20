@@ -9,5 +9,5 @@ This is a workday scheduler that displays typical work times from 7AM-5PM. The u
 
 
 ## Deployment URL
-Deployed URL: /
-GitHub URL: 
+Deployed URL: https://jeremy-fong.github.io/work-day-scheduler/
+GitHub URL: https://github.com/jeremy-fong/work-day-scheduler
