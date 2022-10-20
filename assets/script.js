@@ -20,3 +20,21 @@ $('.time-block').each(function(){
     }
 });
 
+$('.saveBtn').on('click', function(){
+    // e.preventDefault();
+    var timeId = $(this).parent().attr('id');
+    var userInput = $(this).siblings('textarea').val();
+
+    localStorage.setItem(timeId, userInput);
+    
+});
+
+$('textarea').each(function(){
+    var storedEvents = $(this).parent().attr('id');
+    var savedEvents = localStorage.getItem(storedEvents);
+    if (savedEvents !== null){
+        $(this).val(savedEvents);
+    }
+})
+
+
